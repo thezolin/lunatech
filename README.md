@@ -26,7 +26,9 @@ NOTE: This environment was created using Vagrant and VirtualBox 5.1. All the ser
 		b) Airports service: http://192.168.58.5:8000/airports
 
 4) To make a deployment on Airports service, please access Jenkins thru http://192.168.58.5:8080 with these credentials:
+	
 	login: admin
+
 	password: lunatech123
 
 5) On Jenkins main screen, click on Pipelines, and then click on "airports_deployment_pipeline". 
@@ -43,17 +45,25 @@ Information about scripts ---------
 All scripts used on this solution is available at "scripts" folder on this repository. 
 
 APP1 - Countries service - 192.168.56.3
+
 ---countries.sh -> Responsible to bring the countries service up. This script is located at /usr/local/bin folder
+
 ---start-iptables -> Responsible to enable all iptables rules on this machine. This script is located at /etc/init.d folder
 
+
 APP2 - Airports service / Jenkins slave node - - 192.168.57.4
+
 ---airports.sh -> Responsible to bring the airports service up. This script is located at /usr/local/bin folder
+
 ---deployment.sh -> Responsible to executing deployment of airports-assembly-1.1.0.jar file. This script is located at /home/vagrant/lunatech folder
+
 ---rollback.sh -> Responsible to executing rollback of airports-assembly-1.1.0.jar to previous version. This script is located at /home/vagrant/lunatech folder
+
 ---start-iptables -> Responsible to enable all iptables rules on this machine. This script is located at /etc/init.d folder
 
 
 LB - Load Balancer/Reverse Proxy/ Jenkins master - 192.168.58.5
+
 ---nodeapp.conf -> Nginx configuration file for reverse proxy function
 
 
